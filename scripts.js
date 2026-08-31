@@ -1,85 +1,181 @@
-(function(){
-
-  if ("scrollRestoration" in history) {
-    history.scrollRestoration = "manual";
-  }
-
-  if (!window.location.hash) {
-    window.scrollTo(0, 0);
-  }
+/* CARRYBYTE BUSINESS RESILIENCE BREAKFAST SITE INTERACTIONS */
 
 
-  const toggle = document.getElementById("menuToggle");
-  const menu = document.getElementById("mobileMenu");
+/* FORCE PAGE TO START AT TOP */
 
-  if(!toggle || !menu) return;
+if ("scrollRestoration" in history) {
+  history.scrollRestoration = "manual";
+}
 
-  toggle.addEventListener("click", function(){
+window.addEventListener("load", function () {
+  window.scrollTo(0, 0);
+});
 
-    const isOpen = menu.classList.toggle("active");
+/* GOOGLE FORM */
 
-    toggle.setAttribute(
-      "aria-expanded",
-      String(isOpen)
+const RSVP_FORM_URL =
+  "https://forms.gle/WCKbMwbNZa5zjAJn8";
+
+
+/* RSVP LINKS */
+
+document
+  .querySelectorAll(".js-rsvp-link")
+  .forEach(function (link) {
+
+    link.setAttribute(
+      "href",
+      RSVP_FORM_URL
     );
 
-    toggle.setAttribute(
-      "aria-label",
-      isOpen
-        ? "Close navigation menu"
-        : "Open navigation menu"
+    /*
+      Always open registration in a new tab.
+    */
+
+    link.setAttribute(
+      "target",
+      "_blank"
     );
 
-    document.body.classList.toggle(
-      "menu-open",
-      isOpen
+    link.setAttribute(
+      "rel",
+      "noopener noreferrer"
     );
 
   });
 
 
-  menu.querySelectorAll("a").forEach(function(link){
+/* ALL EXTERNAL LINKS
+   Any external link on the website automatically opens in a new browser tab. Internal #section links continue opening normally.*/
 
-    link.addEventListener("click", function(){
+document
+  .querySelectorAll("a[href]")
+  .forEach(function (link) {
 
-      menu.classList.remove("active");
+    const href = link.getAttribute("href");
 
-      toggle.setAttribute(
-        "aria-expanded",
-        "false"
+    if (
+      href &&
+      (
+        href.startsWith("http://") ||
+        href.startsWith("https://")
+      )
+    ) {
+
+      link.setAttribute(
+        "target",
+        "_blank"
       );
 
-      toggle.setAttribute(
-        "aria-label",
-        "Open navigation menu"
-      );
-
-      document.body.classList.remove(
-        "menu-open"
-      );
-
-    });
-
-  });
-
-
-  window.addEventListener("resize", function(){
-
-    if(window.innerWidth > 850){
-
-      menu.classList.remove("active");
-
-      toggle.setAttribute(
-        "aria-expanded",
-        "false"
-      );
-
-      document.body.classList.remove(
-        "menu-open"
+      link.setAttribute(
+        "rel",
+        "noopener noreferrer"
       );
 
     }
 
   });
 
-})();
+
+/* MOBILE NAVIGATION */
+
+const menuButton =
+  document.querySelector(
+    ".mobile-menu-toggle"
+  );
+
+const mobileNav =
+  document.querySelector(
+    ".mobile-nav"
+  );
+
+
+if (
+  menuButton &&
+  mobileNav
+) {
+
+  menuButton.addEventListener(
+    "click",
+    function () {
+
+      const isOpen =
+        menuButton.getAttribute(
+          "aria-expanded"
+        ) === "true";
+
+
+      menuButton.setAttribute(
+        "aria-expanded",
+        String(!isOpen)
+      );
+
+
+      mobileNav.classList.toggle(
+        "is-open"
+      );
+
+    }
+  );
+
+
+  /*
+    Close mobile navigation after
+    selecting an internal section.
+  */
+
+  mobileNav
+    .querySelectorAll(
+      'a[href^="#"]'
+    )
+    .forEach(function (link) {
+
+      link.addEventListener(
+        "click",
+        function () {
+
+          menuButton.setAttribute(
+            "aria-expanded",
+            "false"
+          );
+
+          mobileNav.classList.remove(
+            "is-open"
+          );
+
+        }
+      );
+
+    });
+
+}
+
+
+/* ESC KEY CLOSES MOBILE MENU */
+
+document.addEventListener(
+  "keydown",
+  function (event) {
+
+    if (
+      event.key === "Escape" &&
+      mobileNav
+    ) {
+
+      mobileNav.classList.remove(
+        "is-open"
+      );
+
+      if (menuButton) {
+
+        menuButton.setAttribute(
+          "aria-expanded",
+          "false"
+        );
+
+      }
+
+    }
+
+  }
+);

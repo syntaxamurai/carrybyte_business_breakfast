@@ -1,263 +1,574 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 
-<title>Carrybyte | Business Resilience Breakfast</title>
+  <meta charset="UTF-8">
 
-<meta
-  name="description"
-  content="Can your business recover when ransomware, system failure, political risk or other disruption puts critical data and operations at risk? A private executive breakfast by Carrybyte on cyber resilience, disaster recovery and business continuity."
->
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
 
-<link rel="stylesheet" href="styles.css">
+  <meta
+    name="description"
+    content="Carrybyte Business Resilience Breakfast — a private executive conversation on IT resilience, backup, disaster recovery and business continuity."
+  >
+
+  <title>
+    Carrybyte Business Resilience Breakfast
+  </title>
+
+
+  <!-- GOOGLE FONTS -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap"
+    rel="stylesheet"
+  >
+
+
+  <!-- STYLESHEET -->
+
+  <link
+    rel="stylesheet"
+    href="styles.css"
+  >
 
 </head>
 
-<body>
 
-<!-- =======================================================
-     HERO
-======================================================= -->
+<body id="top">
 
-<header class="hero" id="overview">
+  <div class="accent-line"></div>
 
-  <div class="wrap">
+  <div class="site-network" aria-hidden="true">
 
-    <nav class="nav">
+  <svg preserveAspectRatio="none">
 
-      <a class="brand" href="https://carrybyte.com" target="_blank" rel="noopener noreferrer" aria-label="Carrybyte">
-        CARRYB<span>Y</span>TE
-      </a>
+    <!-- Network lines -->
 
-      <div class="navlinks">
-        <a href="#overview">Overview</a>
-        <a href="#discussion">Discussion</a>
-        <a href="#audience">Who Should Attend</a>
-        <a href="#venue">Venue</a>
+    <g class="network-lines">
 
-        <a
-          href="https://carrybyte.com"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Who We Are
-        </a>
-      </div>
+      <line x1="80" y1="140" x2="360" y2="280" />
+      <line x1="360" y1="280" x2="610" y2="120" />
+      <line x1="360" y1="280" x2="520" y2="520" />
+      <line x1="520" y1="520" x2="820" y2="390" />
+      <line x1="520" y1="520" x2="300" y2="760" />
+      <line x1="820" y1="390" x2="1100" y2="220" />
+      <line x1="820" y1="390" x2="1040" y2="620" />
+      <line x1="1040" y1="620" x2="1320" y2="500" />
+      <line x1="1040" y1="620" x2="900" y2="900" />
+      <line x1="300" y1="760" x2="520" y2="980" />
+      <line x1="900" y1="900" x2="1180" y2="1020" />
+      <line x1="1180" y1="1020" x2="1450" y2="860" />
 
-      <div class="nav-right">
-
-        <a
-          class="navcta desktop-nav-cta"
-          href="https://forms.gle/jjuC5bbtg98MzBE4A"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Request Invitation
-        </a>
-
-        <button
-          class="menu-toggle"
-          id="menuToggle"
-          type="button"
-          aria-label="Open navigation menu"
-          aria-expanded="false"
-          aria-controls="mobileMenu"
-        >
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-
-      </div>
-
-      <div class="mobile-menu" id="mobileMenu">
-
-        <a href="#overview">Overview</a>
-        <a href="#discussion">Discussion</a>
-        <a href="#audience">Who Should Attend</a>
-        <a href="#venue">Venue</a>
-
-        <a
-          href="https://carrybyte.com"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Who We Are
-        </a>
-
-        <a
-          href="https://forms.gle/jjuC5bbtg98MzBE4A"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Request Invitation
-        </a>
-
-      </div>
-
-    </nav>
+    </g>
 
 
-    <div class="hero-grid">
+    <!-- Network nodes -->
 
-      <div class="hero-copy-wrap">
+    <g class="network-nodes">
 
-        <div class="kicker">
-          Executive Breakfast
-        </div>
+      <circle cx="80" cy="140" r="4" />
+      <circle cx="360" cy="280" r="6" />
+      <circle cx="610" cy="120" r="4" />
+      <circle cx="520" cy="520" r="7" />
+      <circle cx="820" cy="390" r="5" />
+      <circle cx="300" cy="760" r="4" />
+      <circle cx="1100" cy="220" r="5" />
+      <circle cx="1040" cy="620" r="7" />
+      <circle cx="1320" cy="500" r="4" />
+      <circle cx="900" cy="900" r="5" />
+      <circle cx="520" cy="980" r="4" />
+      <circle cx="1180" cy="1020" r="6" />
+      <circle cx="1450" cy="860" r="4" />
 
-        <h1>
-          Can Your Business Recover When
-          <em>Critical Data Is Gone?</em>
-        </h1>
+    </g>
 
-        <p class="hero-copy">
-          <strong>
-            Backup is not recovery. Recovery must be proven.
-          </strong>
-          A private executive discussion on ransomware, system failure,
-          political risk, disaster recovery and business continuity —
-          and what happens when critical data is compromised, destroyed
-          or made inaccessible.
-        </p>
+  </svg>
 
-
-        <div class="meta">
-
-          <div>
-            <small>Date</small>
-            <b>10 September 2026</b>
-          </div>
-
-          <div>
-            <small>Time</small>
-            <b>8:00 AM – 11:00 AM</b>
-          </div>
-
-          <div>
-            <small>Location</small>
-            <b>Nairobi</b>
-          </div>
-
-          <div>
-            <small>Capacity</small>
-            <b>Limited</b>
-          </div>
-
-        </div>
+</div>
 
 
-        <a
-          class="button"
-          href="https://forms.gle/jjuC5bbtg98MzBE4A"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Request Invitation
+  <!-- NAVIGATION -->
+
+  <header class="site-header">
+
+    <div class="wrap nav-wrap">
+
+      <div class="brand">
+
+   <a
+      href="https://carrybyte.com"
+      aria-label="Carrybyte"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="brand-main"
+    >
+      CARRYBYTE
+    </a>
+
+    <span class="brand-divider">
+      /
+    </span>
+
+  <span class="brand-event">
+    BUSINESS RESILIENCE
+  </span>
+
+</div>
+
+      <nav
+        class="main-nav"
+        aria-label="Main navigation"
+      >
+
+        <a href="#why">
+          Why resilience
         </a>
 
-        <div class="note">
-          Complimentary breakfast · Invitation-based · Limited participants
-        </div>
+        <a href="#questions">
+          Questions
+        </a>
 
-      </div>
+        <a href="#morning">
+          The morning
+        </a>
+
+        <a href="#room">
+          The room
+        </a>
+
+        <a href="#venue">
+          Venue
+        </a>
+
+        <a
+          href="https://forms.gle/WCKbMwbNZa5zjAJn8"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="nav-cta"
+        >
+          Reserve your seat
+        </a>
+
+      </nav>
 
 
-      <div class="poster-column">
+      <!-- Mobile menu button -->
 
-        <div class="poster-slot">
+      <button
+        class="mobile-menu-toggle"
+        type="button"
+        aria-label="Open navigation"
+        aria-expanded="false"
+      >
 
-          <img
-            src="images/event_poster_01.png"
-            alt="Carrybyte Business Resilience Breakfast event poster"
-            loading="eager"
-          >
+        <span></span>
+        <span></span>
+        <span></span>
 
-        </div>
-
-      </div>
+      </button>
 
     </div>
+
+  </header>
+
+
+  <!-- MOBILE NAVIGATION -->
+
+  <div class="mobile-nav">
+
+    <a href="#why">
+      Why resilience
+    </a>
+
+    <a href="#questions">
+      Questions
+    </a>
+
+    <a href="#morning">
+      The morning
+    </a>
+
+    <a href="#room">
+      The room
+    </a>
+
+    <a href="#venue">
+      Venue
+    </a>
+
+    <a
+      href="https://forms.gle/WCKbMwbNZa5zjAJn8"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="mobile-nav-cta"
+    >
+      Reserve your seat →
+    </a>
 
   </div>
 
-</header>
+
+  <!-- PAGE START -->
+
+  <main id="top">
 
 
-<!-- =======================================================
-     WHY THIS BREAKFAST MATTERS
-======================================================= -->
+    <!-- HERO -->
 
-<section class="section paper">
+    <section class="hero">
+
+      <!-- Background grid -->
+
+      <div
+        class="hero-grid"
+        aria-hidden="true"
+      ></div>
+
+
+      <!-- Infrastructure network -->
+
+      <div
+        class="network"
+        aria-hidden="true"
+      >
+
+        <svg
+          viewBox="0 0 600 720"
+          preserveAspectRatio="xMidYMid meet"
+        >
+
+          <line
+            class="network-line"
+            x1="90"
+            y1="120"
+            x2="280"
+            y2="220"
+          />
+
+          <line
+            class="network-line"
+            x1="280"
+            y1="220"
+            x2="480"
+            y2="150"
+          />
+
+          <line
+            class="network-line"
+            x1="280"
+            y1="220"
+            x2="250"
+            y2="390"
+          />
+
+          <line
+            class="network-line"
+            x1="250"
+            y1="390"
+            x2="440"
+            y2="450"
+          />
+
+          <line
+            class="network-line"
+            x1="250"
+            y1="390"
+            x2="100"
+            y2="520"
+          />
+
+          <line
+            class="network-line"
+            x1="440"
+            y1="450"
+            x2="490"
+            y2="620"
+          />
+
+          <line
+            class="network-line"
+            x1="100"
+            y1="520"
+            x2="190"
+            y2="670"
+          />
+
+          <line
+            class="network-line"
+            x1="480"
+            y1="150"
+            x2="535"
+            y2="300"
+          />
+
+          <line
+            class="network-line"
+            x1="535"
+            y1="300"
+            x2="440"
+            y2="450"
+          />
+
+
+          <circle
+            class="network-node"
+            cx="90"
+            cy="120"
+            r="4"
+          />
+
+          <circle
+            class="network-node"
+            cx="280"
+            cy="220"
+            r="6"
+          />
+
+          <circle
+            class="network-node"
+            cx="480"
+            cy="150"
+            r="4"
+          />
+
+          <circle
+            class="network-node"
+            cx="250"
+            cy="390"
+            r="7"
+          />
+
+          <circle
+            class="network-node"
+            cx="440"
+            cy="450"
+            r="5"
+          />
+
+          <circle
+            class="network-node"
+            cx="100"
+            cy="520"
+            r="4"
+          />
+
+          <circle
+            class="network-node"
+            cx="490"
+            cy="620"
+            r="5"
+          />
+
+          <circle
+            class="network-node"
+            cx="190"
+            cy="670"
+            r="4"
+          />
+
+          <circle
+            class="network-node"
+            cx="535"
+            cy="300"
+            r="4"
+          />
+
+        </svg>
+
+      </div>
+
+
+      <div class="wrap">
+
+        <div class="hero-content">
+
+
+          <div class="eyebrow">
+            An Imani Labs | Carrybyte gathering
+          </div>
+
+
+          <h1>
+            Carrybyte Business Resilience
+            <em>Breakfast</em>
+          </h1>
+
+
+          <p class="hero-description">
+
+            A private executive breakfast for senior technology and business leaders on keeping the systems that run your business standing when everything else doesn't.
+
+            <br><br>
+
+            <strong>
+              Backup is not recovery. Recovery must be proven.
+            </strong>
+
+          </p>
+
+
+          <!-- Event metadata -->
+
+          <div class="hero-meta">
+            <div class="meta-item">
+              <span class="meta-label">
+                Date
+             </span>
+
+              <span class="meta-value">
+                Thursday, 10 September 2026
+              </span>
+            </div>
+
+            <div class="meta-item">
+              <span class="meta-label">
+                Time
+              </span>
+              <span class="meta-value">
+                8:00 – 11:00 AM
+              </span>
+            </div>
+
+            <div class="meta-item">
+              <span class="meta-label">
+                Location
+              </span>
+              <span class="meta-value">
+                Paix Data Centers, Nairobi
+              </span>
+            </div>
+
+          </div>
+
+
+          <!-- Hero CTA -->
+
+          <a
+            href="https://forms.gle/WCKbMwbNZa5zjAJn8"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="cta js-rsvp-link"
+          >
+            Reserve your seat
+          </a>
+
+          <span class="cta-note">
+           By Invitation · Seats are held until 9th September 2026.
+          </span>
+        </div>
+      </div>
+    </section>
+
+<!-- WHY THIS BREAKFAST MATTERS -->
+
+<section
+  class="content-section"
+  id="why"
+>
 
   <div class="wrap">
 
-    <div class="eyebrow">
-      Why this breakfast matters
+    <div class="section-inner">
+
+      <div class="section-label">
+        Why business resilience matters now.
+      </div>
+
+      <h2>
+        Your organisation has backups.
+        <br>
+        But can it recover <em> when the worst happens?</em>
+      </h2>
+
+      <p>
+        Ransomware, infrastructure failure, political disruption,
+        cloud account compromise, accidental deletion and other
+        incidents can make critical data unavailable. This breakfast
+        examines whether your recovery strategy can withstand the
+        events most likely to put your operations at risk.
+      </p>
+
     </div>
 
-    <h2>
-      Your organisation has backups.
-      <br>
-      But can it recover when the worst happens?
-    </h2>
 
-    <p class="intro">
-      Ransomware, infrastructure failure, political disruption, cloud account
-      compromise, accidental deletion and other incidents can make critical
-      data unavailable. This breakfast examines whether your recovery strategy
-      can withstand the events most likely to put your operations at risk.
-    </p>
-
+    <!-- RESILIENCE RISKS -->
 
     <div class="problem-grid">
 
       <article class="problem">
-        <div class="num">01 — RANSOMWARE &amp; CYBERATTACKS</div>
+
+        <div class="num">
+          01 — RANSOMWARE &amp; CYBERATTACKS
+        </div>
 
         <h3>
           Your backup must survive the attack too.
         </h3>
 
         <p>
-          Ransomware can target production systems, backup repositories and credentials.
-          Recovery needs independent, protected copies and proven restores.
+          Ransomware can target production systems, backup repositories
+          and credentials. Recovery needs independent, protected copies
+          and proven restores.
         </p>
+
       </article>
 
 
       <article class="problem">
-        <div class="num">02 — SYSTEM &amp; INFRASTRUCTURE FAILURE</div>
+
+        <div class="num">
+          02 — SYSTEM &amp; INFRASTRUCTURE FAILURE
+        </div>
 
         <h3>
           One failure should not take recovery with it.
         </h3>
 
         <p>
-          Hardware, software, power, network, storage or cloud failures can
-          make production unavailable — and expose weaknesses in recovery.
+          Hardware, software, power, network, storage or cloud failures
+          can make production unavailable — and expose weaknesses
+          in recovery.
         </p>
+
       </article>
 
 
       <article class="problem">
-        <div class="num">03 — POLITICAL &amp; PHYSICAL RISK</div>
+
+        <div class="num">
+          03 — POLITICAL &amp; PHYSICAL RISK
+        </div>
 
         <h3>
           Your recovery plan must survive loss of site or access.
         </h3>
 
         <p>
-          Political disruption, civil unrest, fire, flood or loss of physical
-          access can affect both on-premise infrastructure and recovery sites.
+          Political disruption, civil unrest, fire, flood or loss of
+          physical access can affect both on-premise infrastructure
+          and recovery sites.
         </p>
+
       </article>
 
 
       <article class="problem">
-        <div class="num">04 — RECOVERY READINESS</div>
+
+        <div class="num">
+          04 — RECOVERY READINESS
+        </div>
 
         <h3>
           Recovery needs to be independent, tested and owned.
@@ -267,6 +578,7 @@
           Runbooks, escalation paths, protected credentials and named
           decision-makers matter when normal access is no longer available.
         </p>
+
       </article>
 
     </div>
@@ -275,446 +587,699 @@
 
 </section>
 
+    <!-- SIX QUESTIONS -->
 
-<!-- =======================================================
-     DISCUSSION
-======================================================= -->
+    <section
+      class="content-section"
+      id="questions"
+    >
 
-<section class="section dark-section" id="discussion">
+      <div class="wrap">
+        <div class="section-inner">
+          <div class="section-label">
+            Executive discussion
+          </div>
+  
+          <h2>
+            Six questions every
+            <em>technology leader</em>
+            should be able to answer.
+          </h2>
 
-  <div class="wrap">
+          <div class="questions">
+            <div class="question">
+              <div class="question-number">
+                01
+              </div>
+              <div class="question-text">
+                If your primary systems went offline today,
+                how long could the business actually operate?
+              </div>
 
-    <div class="eyebrow">
-      Executive discussion
-    </div>
-
-    <h2>
-      From data protection to proven recovery.
-    </h2>
-
-
-    <div class="topics">
-
-      <article class="topic">
-        <b>Cyber resilience</b>
-
-        <p>
-          Ransomware-resistant copies, isolation, credential protection
-          and recovery from compromised environments.
-        </p>
-      </article>
-
-
-      <article class="topic">
-        <b>Failure scenarios</b>
-
-        <p>
-          System failure, infrastructure loss, cloud disruption and
-          other events that can make critical data inaccessible.
-        </p>
-      </article>
+            </div>
 
 
-      <article class="topic">
-        <b>Recovery architecture</b>
+            <div class="question">
 
-        <p>
-          Independent copies, recovery sites and restore orchestration
-          designed for loss of the primary environment.
-        </p>
-      </article>
+              <div class="question-number">
+                02
+              </div>
 
+              <div class="question-text">
 
-      <article class="topic">
-        <b>Business continuity</b>
+                How quickly can your critical applications
+                and data be restored?
 
-        <p>
-          Connecting technology recovery to operational, regulatory,
-          political and executive risk.
-        </p>
-      </article>
+              </div>
 
-    </div>
+            </div>
 
 
-    <div style="margin-top:70px">
+            <div class="question">
 
-      <div class="eyebrow">
-        The six questions
-      </div>
+              <div class="question-number">
+                03
+              </div>
 
-      <h2 style="max-width:700px">
-        Every leader should be able to answer these.
-      </h2>
+              <div class="question-text">
+
+                When was the last time your recovery process
+                was successfully tested?
+
+              </div>
+
+            </div>
 
 
-      <div class="questions">
+            <div class="question">
 
-        <div class="q">
-          <div class="qno">01</div>
-          <span>Which systems and data must return first?</span>
+              <div class="question-number">
+                04
+              </div>
+
+              <div class="question-text">
+
+                What happens if your primary backup environment
+                is compromised at the same time as production?
+
+              </div>
+
+            </div>
+
+
+            <div class="question">
+
+              <div class="question-number">
+                05
+              </div>
+
+              <div class="question-text">
+
+                Which business functions must recover first —
+                and who decides?
+
+              </div>
+
+            </div>
+
+
+            <div class="question">
+
+              <div class="question-number">
+                06
+              </div>
+
+              <div class="question-text">
+
+                Could your organisation prove its recovery
+                readiness to the board, auditors or regulators?
+
+              </div>
+
+            </div>
+
+
+          </div>
+
         </div>
 
-        <div class="q">
-          <div class="qno">02</div>
-          <span>When was your last successful restore from an isolated copy?</span>
+      </div>
+
+    </section>
+
+
+    <!-- THE MORNING / AGENDA -->
+
+    <section
+      class="content-section"
+      id="morning"
+    >
+
+      <div class="wrap">
+        <div class="section-inner">
+          <div class="section-label">
+            The morning
+          </div>
+
+          <h2>
+
+            A working conversation,
+            <em>not a sales presentation.</em>
+
+          </h2>
+
+
+          <p>
+
+            The room is intentionally small. The objective is
+            to create an environment where senior leaders can
+            discuss real resilience challenges, compare
+            approaches and identify gaps.
+
+          </p>
+
+
+          <div class="agenda">
+
+
+            <div class="agenda-row">
+
+              <div class="agenda-time">
+                8:00 am
+              </div>
+
+              <div class="agenda-content">
+
+                <strong>
+                  Arrival & breakfast
+                </strong>
+
+                <span>
+                  Coffee, breakfast and informal introductions.
+                </span>
+
+              </div>
+
+            </div>
+
+
+            <div class="agenda-row">
+
+              <div class="agenda-time">
+                8:20 am
+              </div>
+
+              <div class="agenda-content">
+
+                <strong>
+                    Setting the table
+                </strong>
+
+                <span>
+                  A short framing on where business resilience is being tested
+                  across modern enterprise environments.
+                </span>
+
+              </div>
+
+            </div>
+
+
+            <div class="agenda-row">
+
+              <div class="agenda-time">
+                8:30 am 
+              </div>
+
+              <div class="agenda-content">
+
+                <strong>
+                  Executive Roundtable
+                </strong>
+
+                <span>
+                  Real-world discussion around backup,
+                  recovery, continuity and infrastructure risk.
+                </span>
+
+              </div>
+
+            </div>
+
+
+            <div class="agenda-row">
+
+              <div class="agenda-time">
+                9:30 am
+              </div>
+
+              <div class="agenda-content">
+
+                <strong>
+                  Recovery readiness
+                </strong>
+
+                <span>
+                  Identifying the gaps between having backup
+                  and being genuinely recoverable.
+                </span>
+
+              </div>
+
+            </div>
+
+
+            <div class="agenda-row">
+
+              <div class="agenda-time">
+                10:20 am
+              </div>
+
+              <div class="agenda-content">
+
+                <strong>
+                  Closing reflections
+                </strong>
+
+                <span>
+                  What we heard, and where the conversation goes from here.
+                </span>
+
+              </div>
+
+            </div>
+
+            <div class="agenda-row">
+
+              <div class="agenda-time">
+                10:30 am
+              </div>
+
+              <div class="agenda-content">
+
+                <strong>
+                  Close
+                </strong>
+
+                <span>
+                  Back to your morning, on time.
+                </span>
+
+              </div>
+
+            </div>
+
+
+          </div>
+
         </div>
 
-        <div class="q">
-          <div class="qno">03</div>
-          <span>What RPO and RTO apply to each critical workload?</span>
+      </div>
+
+    </section>
+
+
+    <!-- WHO'S IN THE ROOM -->
+
+    <section
+      class="content-section"
+      id="room"
+    >
+
+      <div class="wrap">
+
+        <div class="section-inner">
+
+          <div class="section-label">
+            The room
+          </div>
+
+
+          <h2>
+
+            Who will
+            <em>be at the table?</em>
+
+          </h2>
+
+
+          <p>
+
+            We're keeping the group small on purpose - senior leaders across finance, retail, logistics, and technology, each running infrastructure that can't afford a bad day.
+
+            <br>
+              This isn't a room to be sold to. It's a room to think out loud in.
+            <br>  
+
+          </p>
+
+
+          <div class="audience-grid">
+
+
+            <div class="audience-item">
+
+              <strong>
+                CIOs & CTOs
+              </strong>
+
+              <span>
+                Technology executives accountable for
+                infrastructure, availability and recovery.
+              </span>
+
+            </div>
+
+
+            <div class="audience-item">
+
+              <strong>
+                IT Leaders
+              </strong>
+
+              <span>
+                Heads of infrastructure, systems, networks,
+                cloud and enterprise technology.
+              </span>
+
+            </div>
+
+
+            <div class="audience-item">
+
+              <strong>
+                Risk & Compliance
+              </strong>
+
+              <span>
+                Leaders responsible for operational risk,
+                governance, controls and regulatory readiness.
+              </span>
+
+            </div>
+
+
+            <div class="audience-item">
+
+              <strong>
+                Business Decision Makers
+              </strong>
+
+              <span>
+                CEOs, COOs and executives responsible for
+                keeping critical operations running.
+              </span>
+
+            </div>
+
+
+            <div class="audience-item">
+
+              <strong>
+                Financial Services
+              </strong>
+
+              <span>
+                Organisations where downtime, data loss and
+                regulatory exposure carry significant impact.
+              </span>
+
+            </div>
+
+
+            <div class="audience-item">
+
+              <strong>
+                Healthcare & Enterprise
+              </strong>
+
+              <span>
+                Businesses where technology availability
+                directly affects customers and operations.
+              </span>
+
+            </div>
+
+
+          </div>
+
+
+          <div class="statement">
+
+            Only 20 seats. The room is deliberately small
+            because meaningful executive conversations require it.
+
+          </div>
+
         </div>
 
-        <div class="q">
-          <div class="qno">04</div>
-          <span>Can your recovery design survive ransomware, system failure or loss of site access?</span>
+      </div>
+
+    </section>
+
+
+    <!-- VENUE -->
+
+    <section
+      class="content-section"
+      id="venue"
+    >
+
+      <div class="wrap">
+
+        <div class="section-inner">
+
+          <div class="section-label">
+            Venue partner
+          </div>
+
+
+          <h2>
+
+            Hosted at
+            <em>PAIX Data Centres.</em>
+
+          </h2>
+
+
+          <p>
+
+            The conversation takes place within Nairobi's
+            data-centre ecosystem — an environment directly
+            connected to the infrastructure resilience
+            questions at the heart of the discussion.
+
+          </p>
+
+
+          <div class="venue">
+
+            <div class="venue-title">
+
+              PAIX Data Centres
+
+            </div>
+
+            <div class="venue-subtitle">
+
+              Nairobi, Kenya
+
+            </div>
+            <a
+              href="https://paix.io/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="venue-link"
+            >
+
+              Visit PAIX Data Centres →
+
+            </a>
+          </div>
         </div>
-
-        <div class="q">
-          <div class="qno">05</div>
-          <span>Are your copies and recovery credentials protected from the same incident?</span>
-        </div>
-
-        <div class="q">
-          <div class="qno">06</div>
-          <span>Who declares, leads and authorises recovery when normal operations are unavailable?</span>
-        </div>
-
       </div>
-
-    </div>
-
-  </div>
-
-</section>
+    </section>
 
 
-<!-- =======================================================
-     ASSESSMENT
-======================================================= -->
+    <!-- =========================================================
+     YOUR TAKEAWAY
+========================================================== -->
 
-<section class="section paper">
+    <section class="content-section" id="takeaway">
 
-  <div class="wrap assess">
+      <div class="wrap">
 
-    <div>
+        <div class="section-inner">
 
-      <div class="eyebrow">
-        Your takeaway
-      </div>
+          <div class="section-label">
+            Your takeaway
+          </div>
 
-      <h2>
-        Recovery Readiness Assessment
-      </h2>
-
-      <p class="intro">
-        Participating organisations will have the opportunity to assess
-        their three most critical systems across the six decision areas
-        discussed during the breakfast.
-      </p>
-
-      <p class="intro">
-        The objective is simple: identify strengths, expose gaps and
-        define practical next actions.
-      </p>
-
-      <a
-        class="button submit"
-        href="https://forms.gle/jjuC5bbtg98MzBE4A"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Request Your Invitation
-      </a>
-
-    </div>
-
-
-    <div class="scorebox">
-
-      <div
-        style="
-          color:#ff5a0a;
-          font-weight:900;
-          font-size:11px;
-          letter-spacing:1px;
-        "
-      >
-        ILLUSTRATIVE OUTPUT
-      </div>
-
-      <div class="score">
-        78
-        <small>/ 100</small>
-      </div>
-
-      <div style="color:#d6dfe9">
-        Recovery Readiness
-      </div>
-
-      <div class="bar">
-        <i></i>
-      </div>
-
-      <p
-        style="
-          color:#9eacbd;
-          font-size:13px;
-          margin:0;
-        "
-      >
-        Example only. Your assessment will identify your organisation's
-        actual recovery gaps.
-      </p>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- =======================================================
-     AUDIENCE
-======================================================= -->
-
-<section class="section dark-section" id="audience">
-
-  <div class="wrap">
-
-    <div class="eyebrow">
-      Who should attend
-    </div>
-
-    <h2>
-      Built for people accountable for resilience.
-    </h2>
-
-
-    <div class="audience">
-
-      <div class="aud">
-
-        <h3>
-          Technology leaders
-        </h3>
-
-        <p>
-          CIOs, CTOs, IT Directors, IT Managers,
-          Infrastructure Leaders and CISOs.
-        </p>
-
-      </div>
-
-
-      <div class="aud">
-
-        <h3>
-          Risk &amp; resilience leaders
-        </h3>
-
-        <p>
-          Risk, Compliance, Business Continuity,
-          Internal Audit and related leadership.
-        </p>
-
-      </div>
-
-
-      <div class="aud">
-
-        <h3>
-          Business decision-makers
-        </h3>
-
-        <p>
-          CEOs, COOs and senior leaders responsible
-          for operational continuity.
-        </p>
-
-      </div>
-
-    </div>
-
-
-    <p style="color:#9eacbd;margin-top:30px">
-
-      <strong style="color:#fff">
-        Priority sectors:
-      </strong>
-
-      Financial Services · Healthcare · Technology · Enterprise
-
-    </p>
-
-  </div>
-
-</section>
-
-
-<!-- =======================================================
-     VENUE
-======================================================= -->
-
-<section class="section" id="venue">
-
-  <div class="wrap">
-
-    <div class="venue">
-
-      <div class="venue-content">
-
-        <div class="eyebrow">
-          Venue partner
-        </div>
-
-        <h2 style="margin-bottom:8px">
-          PAIX Data Centres
+        <h2>
+          Recovery Readiness <em>Assessment</em>
         </h2>
 
-        <p
-          style="
-            color:#b7c4d2;
-            max-width:650px;
-            margin:0;
-          "
-        >
-          Proposed venue partner for the executive breakfast.
-          Final venue details will be published once confirmed.
+        <p>
+          Participating organisations will have the opportunity to assess
+          their three most critical systems across the six decision areas
+          discussed during the breakfast.
         </p>
 
-      </div>
+        <p>
+          The objective is simple: identify strengths, expose gaps and
+          define practical next actions.
+        </p>
 
-
-      <div class="paix">
-        PAI<span>X</span>
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- =======================================================
-     REGISTRATION
-======================================================= -->
-
-<section class="section form-section" id="request">
-
-  <div class="wrap formgrid">
-
-    <div class="formintro">
-
-      <div class="eyebrow">
-        Limited participants
-      </div>
-
-      <h2>
-        Request your invitation.
-      </h2>
-
-      <p class="intro">
-        This is a complimentary, invitation-based executive session
-        for technology, risk, resilience and business leaders.
-      </p>
-
-      <p>
-        <strong>
-          Attendance is subject to confirmation.
-        </strong>
-      </p>
-
-    </div>
-
-
-    <div class="form">
-
-      <div class="eyebrow">
-        Registration
-      </div>
-
-      <h3>
-        Secure your place in the discussion.
-      </h3>
-
-      <p class="form-description">
-        Complete the short registration form to request your invitation.
-        Attendance is limited.
-      </p>
-
-
-      <a
-        class="button submit"
-        href="https://forms.gle/jjuC5bbtg98MzBE4A"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Complete Registration
-      </a>
-
-
-      <p class="privacy">
-        Registration is managed through Google Forms.
-        Your details will be used for event registration
-        and related Carrybyte communications.
-      </p>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- =======================================================
-     FOOTER
-======================================================= -->
-
-<footer class="footer">
-
-  <div class="wrap footer-grid">
-
-    <div>
-
-      <strong>
         <a
-          href="https://carrybyte.com"
+          href="https://forms.gle/jjuC5bbtg98MzBE4A"
+          class="cta"
           target="_blank"
           rel="noopener noreferrer"
         >
-          CARRYBYTE
+          Request Your Invitation
         </a>
-      </strong>
 
-      <br>
+      <!-- Assessment Output -->
 
-      Cloud. Infrastructure. Resilience.
+      <div class="assessment-output">
+
+        <div class="assessment-label">
+          Illustrative output
+        </div>
+
+        <div class="assessment-score">
+          78 <span>/ 100</span>
+        </div>
+
+        <div class="assessment-title">
+          Recovery Readiness
+          </div>
+
+            <p class="assessment-note">
+              Example only. Your assessment will identify your
+              organisation's actual recovery gaps.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- CLOSING CTA -->
+
+    <section class="closing">
+
+      <div class="wrap">
+
+        <div class="closing-inner">
+
+
+          <div class="section-label">
+            Invitation
+          </div>
+
+
+          <h2>
+
+            Secure your seat at the table
+
+          </h2>
+
+
+          <p>
+
+            Complete the RSVP form to request your invitation. Seats are limited to 20 participants, and will be held until 9th September 2026.
+
+          </p>
+
+
+          <a
+            href="https://forms.gle/WCKbMwbNZa5zjAJn8"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="cta js-rsvp-link"
+          >
+
+            COMPLETE REGISTRATION 
+
+          </a>
+
+
+          <span class="cta-note">
+
+            Invitation-based · Limited to 20 participants
+
+          </span>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+  </main>
+
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <div class="wrap">
+
+      <div class="footer-inner">
+
+
+        <div class="footer-brand">
+
+          Imani Labs
+          <span>|</span>
+          Carrybyte
+
+        </div>
+
+
+        <div class="footer-meta">
+
+          <div>
+
+            Business Resilience Breakfast
+            · Nairobi
+            · 10 September 2026
+
+          </div>
+
+
+          <div>
+
+            <a
+              href="mailto:justin@imanilabs.com">
+                Enquiries
+            </a>
+
+            &nbsp;·&nbsp;
+
+            <a
+              href="https://forms.gle/WCKbMwbNZa5zjAJn8"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Registration
+            </a>
+
+            &nbsp;·&nbsp;
+
+            <a href="#top">
+              Back to top ↑
+            </a>
+
+          </div>
+
+
+          <div>
+
+            Please don't forward this invitation
+            without checking with the host.
+
+          </div>
+
+        </div>
+
+      </div>
 
     </div>
 
-
-    <div>
-      Business Resilience Breakfast ·
-      10 September 2026 · Nairobi
-    </div>
+  </footer>
 
 
-    <div>
-      Venue TBC · Limited seats · Complimentary
-    </div>
+  <!-- JAVASCRIPT -->
 
-  </div>
-
-</footer>
-
-
-<!-- =======================================================
-     MOBILE MENU SCRIPT
-======================================================= -->
-
-<script src="scripts.js"></script>
+    <script src="scripts.js"></script>
 
 </body>
+
 </html>
