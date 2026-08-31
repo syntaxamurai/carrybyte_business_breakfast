@@ -8,1464 +8,12 @@
 
 <meta
   name="description"
-  content="Can your business survive a 24-hour IT outage? A private executive breakfast by Carrybyte on backup, disaster recovery and business continuity."
+  content="Can your business recover when ransomware, system failure, political risk or other disruption puts critical data and operations at risk? A private executive breakfast by Carrybyte on cyber resilience, disaster recovery and business continuity."
 >
 
-<style>
-:root{
-  --ink:#07111f;
-  --ink2:#0c1a2b;
-  --panel:#10243a;
-  --orange:#ff5a0a;
-  --orange2:#ff7a32;
-  --white:#f8fafc;
-  --muted:#9eacbd;
-  --line:#26394e;
-  --paper:#f4f6f8;
-  --text:#152235;
-  --soft:#e7ebef;
-}
+<link rel="stylesheet" href="styles.css">
 
-/* =========================================================
-   RESET / BASE
-   ========================================================= */
-
-*,
-*::before,
-*::after{
-  box-sizing:border-box;
-}
-
-html{
-  scroll-behavior:smooth;
-  -webkit-text-size-adjust:100%;
-  overflow-x:hidden;
-}
-
-body{
-  margin:0;
-  width:100%;
-  min-width:0;
-  overflow-x:hidden;
-
-  font-family:
-    Inter,
-    ui-sans-serif,
-    system-ui,
-    -apple-system,
-    BlinkMacSystemFont,
-    "Segoe UI",
-    Arial,
-    sans-serif;
-
-  background:var(--ink);
-  color:var(--white);
-  line-height:1.55;
-}
-
-body.menu-open{
-  overflow:hidden;
-}
-
-img{
-  display:block;
-  max-width:100%;
-}
-
-a{
-  color:inherit;
-  text-decoration:none;
-}
-
-button,
-input,
-select,
-textarea{
-  font:inherit;
-}
-
-button{
-  appearance:none;
-}
-
-.wrap{
-  width:min(1180px, calc(100% - 48px));
-  margin-inline:auto;
-  min-width:0;
-}
-
-section,
-header,
-footer{
-  min-width:0;
-}
-
-[id]{
-  scroll-margin-top:90px;
-}
-
-
-/* =========================================================
-   NAVIGATION
-   ========================================================= */
-
-.nav{
-  position:relative;
-  z-index:50;
-
-  min-height:78px;
-
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-
-  gap:24px;
-
-  border-bottom:1px solid rgba(255,255,255,.08);
-}
-
-.brand{
-  flex:0 0 auto;
-
-  font-weight:950;
-  font-size:25px;
-  line-height:1;
-
-  letter-spacing:-1.2px;
-  white-space:nowrap;
-}
-
-.brand span{
-  color:var(--orange);
-}
-
-.navlinks{
-  min-width:0;
-
-  display:flex;
-  align-items:center;
-  justify-content:center;
-
-  gap:24px;
-
-  color:#c7d1dd;
-
-  font-size:11px;
-  font-weight:800;
-
-  text-transform:uppercase;
-  letter-spacing:.65px;
-}
-
-.navlinks a{
-  white-space:nowrap;
-  transition:color .2s ease;
-}
-
-.navlinks a:hover{
-  color:#fff;
-}
-
-.navcta{
-  flex:0 0 auto;
-
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-
-  background:var(--orange);
-  color:#fff;
-
-  padding:12px 17px;
-
-  border-radius:5px;
-
-  font-size:12px;
-  font-weight:900;
-
-  white-space:nowrap;
-
-  transition:
-    background .2s ease,
-    transform .2s ease;
-}
-
-.navcta:hover{
-  background:var(--orange2);
-  transform:translateY(-1px);
-}
-
-
-/* Mobile menu button */
-
-.menu-toggle{
-  display:none;
-
-  width:42px;
-  height:42px;
-
-  padding:0;
-
-  border:1px solid rgba(255,255,255,.14);
-  border-radius:6px;
-
-  background:rgba(255,255,255,.04);
-  color:#fff;
-
-  cursor:pointer;
-}
-
-.menu-toggle span{
-  display:block;
-
-  width:18px;
-  height:2px;
-
-  margin:4px auto;
-
-  background:#fff;
-}
-
-
-/* =========================================================
-   HERO
-   ========================================================= */
-
-.hero{
-  position:relative;
-  isolation:isolate;
-
-  overflow:hidden;
-
-  background:
-    radial-gradient(
-      circle at 78% 15%,
-      rgba(255,90,10,.16),
-      transparent 25%
-    ),
-    linear-gradient(
-      115deg,
-      #06101d 0%,
-      #091a2c 55%,
-      #102b46 100%
-    );
-}
-
-.hero::after{
-  content:"";
-
-  position:absolute;
-  inset:0;
-
-  z-index:-1;
-
-  background:
-    linear-gradient(
-      90deg,
-      rgba(6,16,29,.98) 0%,
-      rgba(6,16,29,.86) 45%,
-      rgba(6,16,29,.38) 100%
-    );
-
-  pointer-events:none;
-}
-
-.hero .wrap{
-  position:relative;
-  z-index:2;
-}
-
-.hero-grid{
-  display:grid;
-
-  grid-template-columns:
-    minmax(0,1.04fr)
-    minmax(300px,.76fr);
-
-  gap:clamp(35px,5vw,70px);
-
-  align-items:center;
-
-  padding:
-    clamp(55px,7vw,78px)
-    0
-    clamp(60px,8vw,88px);
-}
-
-.hero-copy-wrap{
-  min-width:0;
-  max-width:720px;
-}
-
-.kicker{
-  display:flex;
-  align-items:center;
-  gap:12px;
-
-  width:max-content;
-  max-width:100%;
-
-  color:var(--orange);
-
-  font-size:13px;
-  font-weight:900;
-
-  text-transform:uppercase;
-  letter-spacing:1.6px;
-}
-
-.kicker::after{
-  content:"";
-
-  width:42px;
-  height:2px;
-
-  flex:0 0 42px;
-
-  background:var(--orange);
-}
-
-h1{
-  width:100%;
-  max-width:720px;
-
-  margin:20px 0 25px;
-
-  font-size:clamp(42px,5.25vw,76px);
-  line-height:.96;
-
-  letter-spacing:clamp(-3px,-.28vw,-2px);
-
-  overflow-wrap:normal;
-  word-break:normal;
-  hyphens:none;
-}
-
-h1 em{
-  font-style:normal;
-  color:var(--orange);
-}
-
-.hero-copy{
-  width:100%;
-  max-width:650px;
-
-  margin:0;
-
-  font-size:clamp(16px,1.55vw,19px);
-  line-height:1.58;
-
-  color:#d3dce6;
-}
-
-.hero-copy strong{
-  color:#fff;
-}
-
-
-/* =========================================================
-   EVENT META
-   ========================================================= */
-
-.meta{
-  width:100%;
-
-  display:grid;
-  grid-template-columns:
-    repeat(4,minmax(0,1fr));
-
-  margin:34px 0;
-
-  border-top:1px solid var(--line);
-  border-bottom:1px solid var(--line);
-}
-
-.meta div{
-  min-width:0;
-
-  padding:18px 12px 18px 0;
-
-  border-right:1px solid var(--line);
-}
-
-.meta div + div{
-  padding-left:18px;
-}
-
-.meta div:last-child{
-  border-right:0;
-}
-
-.meta small{
-  display:block;
-
-  margin-bottom:5px;
-
-  color:var(--muted);
-
-  font-size:10px;
-  font-weight:850;
-
-  text-transform:uppercase;
-  letter-spacing:1px;
-}
-
-.meta b{
-  display:block;
-
-  min-width:0;
-
-  color:#fff;
-
-  font-size:14px;
-  line-height:1.35;
-
-  overflow-wrap:anywhere;
-}
-
-
-/* =========================================================
-   BUTTONS
-   ========================================================= */
-
-.button{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  gap:12px;
-
-  min-height:48px;
-
-  background:var(--orange);
-  color:#fff;
-
-  padding:14px 20px;
-
-  border:0;
-  border-radius:5px;
-
-  font-size:13px;
-  font-weight:900;
-
-  text-transform:uppercase;
-  letter-spacing:.4px;
-
-  cursor:pointer;
-
-  transition:
-    background .2s ease,
-    transform .2s ease;
-}
-
-.button:hover{
-  background:var(--orange2);
-  transform:translateY(-1px);
-}
-
-.button::after{
-  content:"→";
-  font-size:18px;
-  line-height:1;
-}
-
-.note{
-  margin-top:11px;
-
-  color:#8998aa;
-
-  font-size:12px;
-  line-height:1.5;
-}
-
-
-/* =========================================================
-   POSTER
-   ========================================================= */
-
-.poster-column{
-  min-width:0;
-
-  display:flex;
-  justify-content:flex-end;
-}
-
-.poster-slot{
-  width:min(100%,390px);
-
-  aspect-ratio:9 / 16;
-
-  margin-left:auto;
-
-  overflow:hidden;
-
-  border-radius:10px;
-
-  background:#0c1a2b;
-
-  box-shadow:
-    0 30px 70px rgba(0,0,0,.32),
-    0 10px 30px rgba(0,0,0,.18);
-}
-
-.poster-slot img{
-  width:100%;
-  height:100%;
-
-  object-fit:cover;
-  object-position:center;
-
-  background:#0c1a2b;
-}
-
-
-/* =========================================================
-   GENERAL SECTIONS
-   ========================================================= */
-
-.section{
-  padding:
-    clamp(60px,7vw,84px)
-    0;
-}
-
-.paper{
-  background:var(--paper);
-  color:var(--text);
-}
-
-.dark-section{
-  background:var(--ink2);
-}
-
-.eyebrow{
-  color:var(--orange);
-
-  font-size:11px;
-  font-weight:900;
-
-  text-transform:uppercase;
-  letter-spacing:1.4px;
-}
-
-h2{
-  max-width:850px;
-
-  margin:10px 0 16px;
-
-  font-size:clamp(32px,4vw,52px);
-  line-height:1.03;
-
-  letter-spacing:-2px;
-}
-
-.intro{
-  max-width:740px;
-
-  margin-top:0;
-
-  color:#667487;
-
-  font-size:18px;
-  line-height:1.6;
-}
-
-
-/* =========================================================
-   PROBLEM SECTION
-   ========================================================= */
-
-.problem-grid{
-  display:grid;
-
-  grid-template-columns:
-    repeat(2,minmax(0,1fr));
-
-  gap:22px;
-
-  margin-top:38px;
-}
-
-.problem{
-  min-width:0;
-
-  padding:28px;
-
-  background:#fff;
-
-  border:1px solid #dce2e8;
-  border-radius:10px;
-}
-
-.problem .num{
-  color:var(--orange);
-
-  font-size:11px;
-  font-weight:950;
-
-  letter-spacing:1px;
-}
-
-.problem h3{
-  margin:7px 0;
-
-  font-size:20px;
-  line-height:1.25;
-}
-
-.problem p{
-  margin:0;
-
-  color:#687688;
-}
-
-
-/* =========================================================
-   DISCUSSION / TOPICS
-   ========================================================= */
-
-.topics{
-  display:grid;
-
-  grid-template-columns:
-    repeat(4,minmax(0,1fr));
-
-  gap:14px;
-
-  margin-top:35px;
-}
-
-.topic{
-  min-width:0;
-
-  padding:24px;
-
-  border:1px solid var(--line);
-  border-radius:8px;
-
-  background:rgba(255,255,255,.025);
-}
-
-.topic b{
-  display:block;
-
-  margin-bottom:8px;
-
-  line-height:1.35;
-}
-
-.topic p{
-  margin:0;
-
-  color:var(--muted);
-
-  font-size:14px;
-  line-height:1.55;
-}
-
-
-/* =========================================================
-   QUESTIONS
-   ========================================================= */
-
-.questions{
-  display:grid;
-
-  grid-template-columns:
-    repeat(2,minmax(0,1fr));
-
-  column-gap:30px;
-
-  margin-top:35px;
-
-  border-top:1px solid #33475c;
-}
-
-.q{
-  min-width:0;
-
-  display:flex;
-  align-items:center;
-
-  gap:18px;
-
-  padding:20px 0;
-
-  border-bottom:1px solid #33475c;
-}
-
-.qno{
-  flex:0 0 34px;
-
-  width:34px;
-  height:34px;
-
-  display:grid;
-  place-items:center;
-
-  background:#162a40;
-
-  border:1px solid #3b4d62;
-  border-radius:5px;
-
-  font-size:11px;
-  font-weight:900;
-}
-
-.q span{
-  min-width:0;
-
-  font-size:15px;
-  line-height:1.4;
-
-  overflow-wrap:anywhere;
-}
-
-
-/* =========================================================
-   ASSESSMENT
-   ========================================================= */
-
-.assess{
-  display:grid;
-
-  grid-template-columns:
-    minmax(0,1fr)
-    minmax(280px,.9fr);
-
-  gap:clamp(40px,6vw,70px);
-
-  align-items:center;
-}
-
-.scorebox{
-  min-width:0;
-
-  padding:30px;
-
-  background:#0d2035;
-
-  border:1px solid #284058;
-  border-radius:10px;
-}
-
-.score{
-  font-size:70px;
-  font-weight:950;
-  line-height:1;
-}
-
-.score small{
-  font-size:14px;
-  color:var(--muted);
-  font-weight:600;
-}
-
-.bar{
-  height:7px;
-
-  margin:18px 0;
-
-  background:#25394f;
-
-  border-radius:99px;
-
-  overflow:hidden;
-}
-
-.bar i{
-  display:block;
-
-  width:78%;
-  height:100%;
-
-  background:var(--orange);
-
-  border-radius:99px;
-}
-
-
-/* =========================================================
-   AUDIENCE
-   ========================================================= */
-
-.audience{
-  display:grid;
-
-  grid-template-columns:
-    repeat(3,minmax(0,1fr));
-
-  gap:18px;
-
-  margin-top:35px;
-}
-
-.aud{
-  min-width:0;
-
-  padding:20px 0;
-
-  border-top:2px solid var(--orange);
-}
-
-.aud h3{
-  margin:0 0 6px;
-
-  line-height:1.3;
-}
-
-.aud p{
-  margin:0;
-
-  color:var(--muted);
-
-  font-size:14px;
-}
-
-
-/* =========================================================
-   VENUE
-   ========================================================= */
-
-.venue{
-  min-width:0;
-
-  display:grid;
-
-  grid-template-columns:
-    minmax(0,1fr)
-    auto;
-
-  gap:40px;
-
-  align-items:center;
-
-  padding:42px;
-
-  background:
-    linear-gradient(
-      120deg,
-      #0c1d31,
-      #122b45
-    );
-
-  border:1px solid #294058;
-  border-radius:12px;
-}
-
-.venue-content{
-  min-width:0;
-}
-
-.paix{
-  font-size:44px;
-  font-weight:950;
-
-  letter-spacing:-2px;
-
-  white-space:nowrap;
-}
-
-.paix span{
-  color:var(--orange);
-}
-
-
-/* =========================================================
-   REGISTRATION
-   ========================================================= */
-
-.form-section{
-  background:#fff;
-  color:var(--text);
-}
-
-.formgrid{
-  display:grid;
-
-  grid-template-columns:
-    minmax(0,.8fr)
-    minmax(0,1.2fr);
-
-  gap:55px;
-
-  align-items:start;
-}
-
-.formintro{
-  min-width:0;
-}
-
-.form{
-  min-width:0;
-
-  padding:30px;
-
-  background:#f5f7f9;
-
-  border:1px solid #dbe2e8;
-  border-radius:10px;
-}
-
-.form h3{
-  font-size:28px;
-  line-height:1.15;
-
-  margin:10px 0;
-}
-
-.form-description{
-  margin:0;
-
-  color:#687688;
-
-  font-size:14px;
-}
-
-.submit{
-  width:100%;
-
-  margin-top:17px;
-}
-
-.privacy{
-  margin:10px 0 0;
-
-  color:#738092;
-
-  font-size:10px;
-  line-height:1.5;
-}
-
-
-/* =========================================================
-   FOOTER
-   ========================================================= */
-
-.footer{
-  padding:32px 0;
-
-  color:#8290a0;
-
-  font-size:12px;
-
-  border-top:1px solid #23364b;
-}
-
-.footer-grid{
-  display:grid;
-
-  grid-template-columns:
-    auto
-    1fr
-    auto;
-
-  gap:25px;
-
-  align-items:start;
-}
-
-.footer strong{
-  color:#fff;
-  font-size:18px;
-}
-
-
-/* =========================================================
-   MOBILE MENU
-   ========================================================= */
-
-.mobile-menu{
-  display:none;
-
-  position:absolute;
-
-  top:calc(100% + 1px);
-  left:0;
-  right:0;
-
-  padding:14px;
-
-  background:#091725;
-
-  border:1px solid rgba(255,255,255,.1);
-  border-top:0;
-
-  box-shadow:0 20px 40px rgba(0,0,0,.25);
-}
-
-.mobile-menu a{
-  display:block;
-
-  padding:14px 12px;
-
-  border-bottom:1px solid rgba(255,255,255,.07);
-
-  color:#d9e1ea;
-
-  font-size:12px;
-  font-weight:800;
-
-  text-transform:uppercase;
-  letter-spacing:.7px;
-}
-
-.mobile-menu a:last-child{
-  border-bottom:0;
-}
-
-.mobile-menu.active{
-  display:block;
-}
-
-
-/* =========================================================
-   LARGE TABLET
-   ========================================================= */
-
-@media (max-width:1050px){
-
-  .wrap{
-    width:min(100% - 40px,1180px);
-  }
-
-  .navlinks{
-    gap:16px;
-    font-size:10px;
-  }
-
-  .hero-grid{
-    grid-template-columns:
-      minmax(0,1fr)
-      minmax(270px,.65fr);
-
-    gap:38px;
-  }
-
-  h1{
-    font-size:clamp(42px,5.8vw,66px);
-  }
-
-  .poster-slot{
-    width:min(100%,350px);
-  }
-
-  .topics{
-    grid-template-columns:
-      repeat(2,minmax(0,1fr));
-  }
-}
-
-
-/* =========================================================
-   TABLET
-   ========================================================= */
-
-@media (max-width:850px){
-
-  .wrap{
-    width:min(100% - 36px,680px);
-  }
-
-  .nav{
-    min-height:70px;
-  }
-
-  .navlinks{
-    display:none;
-  }
-
-  .menu-toggle{
-    display:block;
-  }
-
-  .nav{
-    justify-content:space-between;
-  }
-
-  .nav-right{
-    display:flex;
-    align-items:center;
-    gap:8px;
-  }
-
-  .desktop-nav-cta{
-    display:none;
-  }
-
-  .hero-grid{
-    grid-template-columns:1fr;
-
-    gap:48px;
-
-    padding:
-      55px
-      0
-      65px;
-  }
-
-  .hero-copy-wrap{
-    max-width:none;
-  }
-
-  h1{
-    max-width:760px;
-
-    font-size:clamp(42px,8vw,64px);
-  }
-
-  .hero-copy{
-    max-width:680px;
-  }
-
-  .poster-column{
-    justify-content:center;
-  }
-
-  .poster-slot{
-    width:min(100%,360px);
-
-    margin:0 auto;
-  }
-
-  .meta{
-    grid-template-columns:
-      repeat(2,minmax(0,1fr));
-  }
-
-  .meta div:nth-child(2){
-    border-right:0;
-  }
-
-  .meta div:nth-child(3),
-  .meta div:nth-child(4){
-    border-top:1px solid var(--line);
-  }
-
-  .meta div:nth-child(3){
-    padding-left:0;
-  }
-
-  .meta div:nth-child(4){
-    border-right:0;
-  }
-
-  .problem-grid,
-  .questions{
-    grid-template-columns:1fr;
-  }
-
-  .assess{
-    grid-template-columns:1fr;
-
-    gap:40px;
-  }
-
-  .audience{
-    grid-template-columns:1fr;
-  }
-
-  .venue{
-    grid-template-columns:1fr;
-
-    gap:25px;
-
-    padding:32px;
-  }
-
-  .formgrid{
-    grid-template-columns:1fr;
-
-    gap:40px;
-  }
-
-  .footer-grid{
-    grid-template-columns:1fr;
-
-    gap:14px;
-  }
-}
-
-
-/* =========================================================
-   SMALL MOBILE
-   ========================================================= */
-
-@media (max-width:600px){
-
-  .wrap{
-    width:calc(100% - 32px);
-  }
-
-  .section{
-    padding:54px 0;
-  }
-
-  .nav{
-    min-height:64px;
-  }
-
-  .brand{
-    font-size:21px;
-  }
-
-  .menu-toggle{
-    width:40px;
-    height:40px;
-  }
-
-  .hero-grid{
-    gap:38px;
-
-    padding:
-      42px
-      0
-      50px;
-  }
-
-  .kicker{
-    font-size:11px;
-    letter-spacing:1.3px;
-  }
-
-  .kicker::after{
-    width:32px;
-    flex-basis:32px;
-  }
-
-  h1{
-    max-width:100%;
-
-    margin:16px 0 20px;
-
-    font-size:clamp(36px,11.5vw,52px);
-
-    line-height:.98;
-
-    letter-spacing:-2px;
-  }
-
-  .hero-copy{
-    font-size:16px;
-    line-height:1.55;
-  }
-
-  .meta{
-    grid-template-columns:
-      repeat(2,minmax(0,1fr));
-
-    margin:25px 0;
-  }
-
-  .meta div{
-    padding:14px 8px 14px 0;
-  }
-
-  .meta div + div{
-    padding-left:10px;
-  }
-
-  .meta small{
-    font-size:9px;
-    letter-spacing:.8px;
-  }
-
-  .meta b{
-    font-size:12px;
-    line-height:1.35;
-  }
-
-  .button{
-    width:100%;
-
-    min-height:48px;
-
-    padding:14px 17px;
-
-    font-size:12px;
-  }
-
-  .note{
-    font-size:11px;
-  }
-
-  .poster-slot{
-    width:min(100%,320px);
-  }
-
-  h2{
-    font-size:clamp(30px,9vw,42px);
-
-    line-height:1.04;
-
-    letter-spacing:-1.5px;
-  }
-
-  .intro{
-    font-size:16px;
-    line-height:1.55;
-  }
-
-  .problem{
-    padding:22px;
-  }
-
-  .problem h3{
-    font-size:18px;
-  }
-
-  .topic{
-    padding:20px;
-  }
-
-  .questions{
-    margin-top:25px;
-  }
-
-  .q{
-    align-items:flex-start;
-
-    gap:13px;
-
-    padding:17px 0;
-  }
-
-  .qno{
-    flex:0 0 32px;
-
-    width:32px;
-    height:32px;
-  }
-
-  .q span{
-    font-size:14px;
-    line-height:1.45;
-  }
-
-  .scorebox{
-    padding:24px;
-  }
-
-  .score{
-    font-size:56px;
-  }
-
-  .venue{
-    padding:25px;
-
-    border-radius:9px;
-  }
-
-  .venue h2{
-    margin-top:8px;
-  }
-
-  .paix{
-    font-size:36px;
-  }
-
-  .form{
-    padding:22px;
-  }
-
-  .form h3{
-    font-size:24px;
-  }
-
-  input,
-  select,
-  textarea{
-    font-size:16px;
-  }
-
-  .footer{
-    padding:26px 0;
-  }
-}
-
-
-/* =========================================================
-   VERY SMALL PHONES
-   ========================================================= */
-
-@media (max-width:380px){
-
-  .wrap{
-    width:calc(100% - 28px);
-  }
-
-  .brand{
-    font-size:19px;
-  }
-
-  .hero-grid{
-    padding-top:36px;
-  }
-
-  h1{
-    font-size:35px;
-    letter-spacing:-1.6px;
-  }
-
-  .hero-copy{
-    font-size:15px;
-  }
-
-  .meta{
-    grid-template-columns:1fr;
-  }
-
-  .meta div,
-  .meta div:nth-child(2),
-  .meta div:nth-child(3),
-  .meta div:nth-child(4){
-    padding:12px 0;
-
-    border-right:0;
-  }
-
-  .meta div + div{
-    padding-left:0;
-  }
-
-  .meta div:nth-child(n+2){
-    border-top:1px solid var(--line);
-  }
-
-  .poster-slot{
-    width:100%;
-  }
-
-  .venue h2{
-    font-size:32px;
-  }
-}
-
-
-/* =========================================================
-   ACCESSIBILITY
-   ========================================================= */
-
-:focus-visible{
-  outline:3px solid rgba(255,90,10,.45);
-  outline-offset:3px;
-}
-
-@media (prefers-reduced-motion:reduce){
-
-  html{
-    scroll-behavior:auto;
-  }
-
-  *,
-  *::before,
-  *::after{
-    transition:none !important;
-    animation:none !important;
-  }
-}
-</style>
 </head>
-
 
 <body>
 
@@ -1479,7 +27,7 @@ h2{
 
     <nav class="nav">
 
-      <a href="#overview" class="brand" aria-label="Carrybyte">
+      <a class="brand" href="https://carrybyte.com" target="_blank" rel="noopener noreferrer" aria-label="Carrybyte">
         CARRYB<span>Y</span>TE
       </a>
 
@@ -1561,16 +109,18 @@ h2{
         </div>
 
         <h1>
-          Can Your Business Survive a
-          <em>24-Hour IT Outage?</em>
+          Can Your Business Recover When
+          <em>Critical Data Is Gone?</em>
         </h1>
 
         <p class="hero-copy">
           <strong>
             Backup is not recovery. Recovery must be proven.
           </strong>
-          A private executive discussion on backup, disaster recovery
-          and business continuity for technology, risk and business leaders.
+          A private executive discussion on ransomware, system failure,
+          political risk, disaster recovery and business continuity —
+          and what happens when critical data is compromised, destroyed
+          or made inaccessible.
         </p>
 
 
@@ -1651,69 +201,71 @@ h2{
     <h2>
       Your organisation has backups.
       <br>
-      But can it actually recover?
+      But can it recover when the worst happens?
     </h2>
 
     <p class="intro">
-      A backup that has never been successfully restored is an assumption—
-      not a proven recovery strategy. This breakfast examines the gap
-      between having copies and being able to restore critical operations.
+      Ransomware, infrastructure failure, political disruption, cloud account
+      compromise, accidental deletion and other incidents can make critical
+      data unavailable. This breakfast examines whether your recovery strategy
+      can withstand the events most likely to put your operations at risk.
     </p>
 
 
     <div class="problem-grid">
 
       <article class="problem">
-        <div class="num">01 — RECOVERY TESTING</div>
+        <div class="num">01 — RANSOMWARE &amp; CYBERATTACKS</div>
 
         <h3>
-          Untested restores create false confidence.
+          Your backup must survive the attack too.
         </h3>
 
         <p>
-          A successful backup job does not prove that the business can recover.
+          Ransomware can target production systems, backup repositories and credentials.
+          Recovery needs independent, protected copies and proven restores.
         </p>
       </article>
 
 
       <article class="problem">
-        <div class="num">02 — INDEPENDENCE</div>
+        <div class="num">02 — SYSTEM &amp; INFRASTRUCTURE FAILURE</div>
 
         <h3>
-          Your backup may share the same risk.
+          One failure should not take recovery with it.
         </h3>
 
         <p>
-          One site, credential domain or failure mode can undermine both
-          production and recovery.
+          Hardware, software, power, network, storage or cloud failures can
+          make production unavailable — and expose weaknesses in recovery.
         </p>
       </article>
 
 
       <article class="problem">
-        <div class="num">03 — RECOVERY OBJECTIVES</div>
+        <div class="num">03 — POLITICAL &amp; PHYSICAL RISK</div>
 
         <h3>
-          RTOs and RPOs must reflect the business.
+          Your recovery plan must survive loss of site or access.
         </h3>
 
         <p>
-          Critical workloads should have recovery objectives based on
-          operational impact.
+          Political disruption, civil unrest, fire, flood or loss of physical
+          access can affect both on-premise infrastructure and recovery sites.
         </p>
       </article>
 
 
       <article class="problem">
-        <div class="num">04 — OWNERSHIP</div>
+        <div class="num">04 — RECOVERY READINESS</div>
 
         <h3>
-          Recovery needs a decision owner.
+          Recovery needs to be independent, tested and owned.
         </h3>
 
         <p>
-          Runbooks, escalation paths and named decision-makers matter
-          during an incident.
+          Runbooks, escalation paths, protected credentials and named
+          decision-makers matter when normal access is no longer available.
         </p>
       </article>
 
@@ -1737,38 +289,38 @@ h2{
     </div>
 
     <h2>
-      From backup to proven recovery.
+      From data protection to proven recovery.
     </h2>
 
 
     <div class="topics">
 
       <article class="topic">
+        <b>Cyber resilience</b>
+
+        <p>
+          Ransomware-resistant copies, isolation, credential protection
+          and recovery from compromised environments.
+        </p>
+      </article>
+
+
+      <article class="topic">
+        <b>Failure scenarios</b>
+
+        <p>
+          System failure, infrastructure loss, cloud disruption and
+          other events that can make critical data inaccessible.
+        </p>
+      </article>
+
+
+      <article class="topic">
         <b>Recovery architecture</b>
 
         <p>
-          Independent copies, repositories, recovery sites and
-          restore orchestration.
-        </p>
-      </article>
-
-
-      <article class="topic">
-        <b>RTO &amp; RPO</b>
-
-        <p>
-          Defining realistic recovery objectives by workload
-          and business priority.
-        </p>
-      </article>
-
-
-      <article class="topic">
-        <b>Recovery testing</b>
-
-        <p>
-          Scheduled restore tests and evidence that recovery
-          procedures actually work.
+          Independent copies, recovery sites and restore orchestration
+          designed for loss of the primary environment.
         </p>
       </article>
 
@@ -1777,8 +329,8 @@ h2{
         <b>Business continuity</b>
 
         <p>
-          Connecting technology recovery to operational,
-          regulatory and executive risk.
+          Connecting technology recovery to operational, regulatory,
+          political and executive risk.
         </p>
       </article>
 
@@ -1800,32 +352,32 @@ h2{
 
         <div class="q">
           <div class="qno">01</div>
-          <span>Which systems must return first?</span>
+          <span>Which systems and data must return first?</span>
         </div>
 
         <div class="q">
           <div class="qno">02</div>
-          <span>When was your last successful restore?</span>
+          <span>When was your last successful restore from an isolated copy?</span>
         </div>
 
         <div class="q">
           <div class="qno">03</div>
-          <span>What RPO and RTO apply to each workload?</span>
+          <span>What RPO and RTO apply to each critical workload?</span>
         </div>
 
         <div class="q">
           <div class="qno">04</div>
-          <span>Which failures must your recovery design survive?</span>
+          <span>Can your recovery design survive ransomware, system failure or loss of site access?</span>
         </div>
 
         <div class="q">
           <div class="qno">05</div>
-          <span>Where are your current copies and credentials held?</span>
+          <span>Are your copies and recovery credentials protected from the same incident?</span>
         </div>
 
         <div class="q">
           <div class="qno">06</div>
-          <span>Who declares and leads a recovery event?</span>
+          <span>Who declares, leads and authorises recovery when normal operations are unavailable?</span>
         </div>
 
       </div>
@@ -2162,86 +714,7 @@ h2{
      MOBILE MENU SCRIPT
 ======================================================= -->
 
-<script>
-
-(function(){
-
-  const toggle = document.getElementById("menuToggle");
-  const menu = document.getElementById("mobileMenu");
-
-  if(!toggle || !menu) return;
-
-  toggle.addEventListener("click", function(){
-
-    const isOpen = menu.classList.toggle("active");
-
-    toggle.setAttribute(
-      "aria-expanded",
-      String(isOpen)
-    );
-
-    toggle.setAttribute(
-      "aria-label",
-      isOpen
-        ? "Close navigation menu"
-        : "Open navigation menu"
-    );
-
-    document.body.classList.toggle(
-      "menu-open",
-      isOpen
-    );
-
-  });
-
-
-  menu.querySelectorAll("a").forEach(function(link){
-
-    link.addEventListener("click", function(){
-
-      menu.classList.remove("active");
-
-      toggle.setAttribute(
-        "aria-expanded",
-        "false"
-      );
-
-      toggle.setAttribute(
-        "aria-label",
-        "Open navigation menu"
-      );
-
-      document.body.classList.remove(
-        "menu-open"
-      );
-
-    });
-
-  });
-
-
-  window.addEventListener("resize", function(){
-
-    if(window.innerWidth > 850){
-
-      menu.classList.remove("active");
-
-      toggle.setAttribute(
-        "aria-expanded",
-        "false"
-      );
-
-      document.body.classList.remove(
-        "menu-open"
-      );
-
-    }
-
-  });
-
-})();
-
-</script>
+<script src="scripts.js"></script>
 
 </body>
 </html>
