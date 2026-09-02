@@ -151,6 +151,67 @@ if (
 }
 
 
+/* THEME TOGGLE
+   The initial theme is already set (before paint) by the inline
+   script in <head>. This section wires up the toggle buttons,
+   keeps both the desktop and mobile buttons in sync, and stores
+   the person's choice for their next visit. */
+
+const THEME_KEY = "carrybyte-theme";
+
+const themeButtons = [
+  document.getElementById("themeToggle"),
+  document.getElementById("themeToggleMobile"),
+].filter(Boolean);
+
+function getCurrentTheme() {
+
+  return document.documentElement.getAttribute("data-theme") === "light"
+    ? "light"
+    : "dark";
+
+}
+
+function setTheme(theme) {
+
+  document.documentElement.setAttribute("data-theme", theme);
+
+  try {
+
+    localStorage.setItem(THEME_KEY, theme);
+
+  } catch (e) {
+
+    /* Storage unavailable — theme still applies for this visit. */
+
+  }
+
+  themeButtons.forEach(function (button) {
+
+    button.setAttribute(
+      "aria-label",
+      theme === "light" ? "Switch to dark theme" : "Switch to light theme"
+    );
+
+  });
+
+}
+
+/* Sync the aria-label on load with whatever the inline script chose. */
+
+setTheme(getCurrentTheme());
+
+themeButtons.forEach(function (button) {
+
+  button.addEventListener("click", function () {
+
+    setTheme(getCurrentTheme() === "light" ? "dark" : "light");
+
+  });
+
+});
+
+
 /* ESC KEY CLOSES MOBILE MENU */
 
 document.addEventListener(

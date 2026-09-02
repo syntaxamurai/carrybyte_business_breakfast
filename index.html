@@ -20,6 +20,21 @@
   </title>
 
 
+  <!-- THEME (applied before paint to avoid a flash of the wrong theme) -->
+
+  <script>
+    (function () {
+      try {
+        var stored = localStorage.getItem("carrybyte-theme");
+        var theme = stored || (window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark");
+        document.documentElement.setAttribute("data-theme", theme);
+      } catch (e) {
+        document.documentElement.setAttribute("data-theme", "dark");
+      }
+    })();
+  </script>
+
+
   <!-- GOOGLE FONTS -->
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -152,6 +167,28 @@
           Venue
         </a>
 
+        <button
+          type="button"
+          class="theme-toggle"
+          id="themeToggle"
+          aria-label="Switch to light theme"
+        >
+          <svg class="icon-sun" viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="4.2" />
+            <line x1="12" y1="1.8" x2="12" y2="4.6" />
+            <line x1="12" y1="19.4" x2="12" y2="22.2" />
+            <line x1="1.8" y1="12" x2="4.6" y2="12" />
+            <line x1="19.4" y1="12" x2="22.2" y2="12" />
+            <line x1="4.9" y1="4.9" x2="6.9" y2="6.9" />
+            <line x1="17.1" y1="17.1" x2="19.1" y2="19.1" />
+            <line x1="4.9" y1="19.1" x2="6.9" y2="17.1" />
+            <line x1="17.1" y1="6.9" x2="19.1" y2="4.9" />
+          </svg>
+          <svg class="icon-moon" viewBox="0 0 24 24">
+            <path d="M20.2 14.6A8.4 8.4 0 1 1 9.4 3.8a6.7 6.7 0 0 0 10.8 10.8Z" />
+          </svg>
+        </button>
+
         <a
           href="https://forms.gle/WCKbMwbNZa5zjAJn8"
           target="_blank"
@@ -208,13 +245,38 @@
       Venue
     </a>
 
+    <div class="mobile-theme-row">
+      <span class="mobile-theme-label">Display</span>
+      <button
+        type="button"
+        class="theme-toggle"
+        id="themeToggleMobile"
+        aria-label="Switch to light theme"
+      >
+        <svg class="icon-sun" viewBox="0 0 24 24">
+          <circle cx="12" cy="12" r="4.2" />
+          <line x1="12" y1="1.8" x2="12" y2="4.6" />
+          <line x1="12" y1="19.4" x2="12" y2="22.2" />
+          <line x1="1.8" y1="12" x2="4.6" y2="12" />
+          <line x1="19.4" y1="12" x2="22.2" y2="12" />
+          <line x1="4.9" y1="4.9" x2="6.9" y2="6.9" />
+          <line x1="17.1" y1="17.1" x2="19.1" y2="19.1" />
+          <line x1="4.9" y1="19.1" x2="6.9" y2="17.1" />
+          <line x1="17.1" y1="6.9" x2="19.1" y2="4.9" />
+        </svg>
+        <svg class="icon-moon" viewBox="0 0 24 24">
+          <path d="M20.2 14.6A8.4 8.4 0 1 1 9.4 3.8a6.7 6.7 0 0 0 10.8 10.8Z" />
+        </svg>
+      </button>
+    </div>
+
     <a
       href="https://forms.gle/WCKbMwbNZa5zjAJn8"
       target="_blank"
       rel="noopener noreferrer"
       class="mobile-nav-cta"
     >
-      Reserve your seat →
+      Reserve your seat
     </a>
 
   </div>
@@ -510,7 +572,8 @@
       <article class="problem">
 
         <div class="num">
-          01 — RANSOMWARE &amp; CYBERATTACKS
+          <span class="num-index">01</span>
+          <span class="num-text">Ransomware &amp; cyberattacks</span>
         </div>
 
         <h3>
@@ -529,7 +592,8 @@
       <article class="problem">
 
         <div class="num">
-          02 — SYSTEM &amp; INFRASTRUCTURE FAILURE
+          <span class="num-index">02</span>
+          <span class="num-text">System &amp; infrastructure failure</span>
         </div>
 
         <h3>
@@ -548,7 +612,8 @@
       <article class="problem">
 
         <div class="num">
-          03 — POLITICAL &amp; PHYSICAL RISK
+          <span class="num-index">03</span>
+          <span class="num-text">Political &amp; physical risk</span>
         </div>
 
         <h3>
@@ -567,7 +632,8 @@
       <article class="problem">
 
         <div class="num">
-          04 — RECOVERY READINESS
+          <span class="num-index">04</span>
+          <span class="num-text">Recovery readiness</span>
         </div>
 
         <h3>
@@ -1072,7 +1138,7 @@
               class="venue-link"
             >
 
-              Visit PAIX Data Centres →
+              Visit PAIX Data Centres
 
             </a>
           </div>
@@ -1215,10 +1281,22 @@
 
 
         <div class="footer-brand">
+          <a
+            href="https://imanilabs.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
 
           Imani Labs
+          </a>
           <span>|</span>
-          Carrybyte
+          <a
+            href="https://carrybyte.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Carrybyte
+          </a>
 
         </div>
 
